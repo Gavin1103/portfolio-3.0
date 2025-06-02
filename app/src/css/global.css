@@ -1,0 +1,12 @@
+:root {
+    --primary-color: #005463;
+    --accent-color: #FFAB9C;
+    --surface-light: #EAF4F6;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--primary-color);
+    font-family: 'Konkhmer Sleokchher', sans-serif;
+}
