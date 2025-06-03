@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import NavComponent from "@/components/NavComponent.vue";
 import { RouterView, RouterLink } from 'vue-router'
 
