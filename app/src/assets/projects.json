@@ -1,0 +1,49 @@
+[
+  {
+    "identifier": "visie-op-de-uitslag",
+    "title": "Visie op de uitslag",
+    "primary-image": "visie-op-de-uitslag.png",
+    "git": "https://github.com/Gavin1103/Visie-op-de-uitslag",
+
+    "description": "visie op de uitslag...",
+    "technical-description": "Built with vue.js (website) and Spring Boot (API)",
+    "secondary-image": "visie-op-de-uitslag-api.png",
+    "intern-link": "visie-op-de-uitslag",
+    "url-1": "https://visie-op-de-uitslag.up.railway.app/",
+    "url-2": "https://visie-op-de-uitslag-api.up.railway.app/api/swagger-ui/index.html#/",
+    "extra-images": [
+      "class-diagram-visie-op-de-uitslag.png",
+      "class-diagram-2-visie-op-de-uitslag.png",
+      "erd-visie-op-de-uitslag.png",
+      "wireframe-visie-op-de-uitslag.png",
+      "wireframe-2-visie-op-de-uitslag.png"
+    ]
+  },
+  {
+    "identifier": "vr-balance",
+    "title": "VR Balance",
+    "primary-image": "vr-balance.png",
+    "git": "/test",
+
+    "description": "Dit is een CMS systeem voor het project VR-Balance",
+    "technical-description": "Built with vue.js (website) and Spring Boot (API)",
+    "secondary-image": "vr-balance-api.png",
+    "intern-link": "vr-balance",
+    "url-1": "https://vrbalance.up.railway.app/",
+    "url-2": "https://vrbalance-api.up.railway.app/swagger-ui/index.html",
+    "extra-images": []
+  },
+  {
+    "identifier": "test",
+    "title": "Tests",
+    "primary-image": "test.png",
+    "git": "/test",
+
+    "description": "",
+    "secondary-image": "",
+    "intern-link": "",
+    "url-1": "",
+    "url-2": "",
+    "extra-images": []
+  }
+]

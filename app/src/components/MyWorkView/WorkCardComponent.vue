@@ -1,20 +1,30 @@
 <script setup lang="ts">
+import {defineProps} from 'vue'
+import {Github, ExternalLink, Info} from 'lucide-vue-next'
 
-import {Github, ExternalLink, Info} from "lucide-vue-next";
+const props = defineProps<{
+  identifier: string
+  title: string
+  image: string
+  url1?: string
+  git?: string
+  info?: string
+}>()
 </script>
 
 <template>
   <div class="card">
-    <img src="../../assets/img/visie-op-de-uitslag.png" alt="project-image"/>
-    <p class="card-text">Visie op de uitslag</p>
+    <img :src="`/src/assets/img/${props.identifier}/${props.image}`" :alt="title"/>
+    <p class="card-text">{{ title }}</p>
+
     <div class="card-icons-container">
-      <a href="https://visie-op-de-uitslag.up.railway.app/" target="_blank">
+      <a v-if="url1" :href="url1" target="_blank">
         <ExternalLink class="icon"/>
       </a>
-      <RouterLink to="/project-detail">
+      <RouterLink v-if="info" :to="`/project-detail/${info}`">
         <Info class="icon"/>
       </RouterLink>
-      <a href="#" target="_blank">
+      <a v-if="git && git !== '#'" :href="git" target="_blank">
         <Github class="icon"/>
       </a>
     </div>
@@ -27,7 +37,7 @@ import {Github, ExternalLink, Info} from "lucide-vue-next";
   min-width: 300px;
   width: 47.5%;
   height: 400px;
-  padding: 30px 0 0 0;
+  padding: 30px 0 10px 0;
   background-color: #007C91;
   margin-bottom: 50px;
   display: flex;
