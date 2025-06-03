@@ -8,9 +8,15 @@ import {Github, ExternalLink, Info} from "lucide-vue-next";
     <img src="../../assets/visie-op-de-uitslag.png" alt="project-image"/>
     <p class="card-text">Visie op de uitslag</p>
     <div class="card-icons-container">
-      <ExternalLink class="icon"/>
-      <Info class="icon"/>
-      <Github class="icon"/>
+      <a href="https://visie-op-de-uitslag.up.railway.app/" target="_blank">
+        <ExternalLink class="icon"/>
+      </a>
+      <RouterLink to="/project-detail">
+        <Info class="icon"/>
+      </RouterLink>
+      <a href="#" target="_blank">
+        <Github class="icon"/>
+      </a>
     </div>
   </div>
 </template>
@@ -19,7 +25,7 @@ import {Github, ExternalLink, Info} from "lucide-vue-next";
 
 .card {
   min-width: 300px;
-  width: 45%;
+  width: 47.5%;
   height: 400px;
   padding: 30px 0 0 0;
   background-color: #007C91;
@@ -53,27 +59,31 @@ import {Github, ExternalLink, Info} from "lucide-vue-next";
     min-width: 280px;
     width: 75%;
 
-    .icon {
-      margin: 0 15px;
-      height: 30px;
-      width: 30px;
-      color: var(--surface-light);
-      transition: transform 0.2s ease, color 0.2s ease;
-      flex-shrink: 0;
-      stroke-width: 2.5; /* standaard is meestal 2 */
-    }
+    a {
+      display: flex;
+      justify-content: center;
 
-    .icon:hover {
-      color: var(--accent-color);
-      transform: scale(1.3);
-      cursor: pointer;
+      .icon {
+        margin: 0 15px;
+        height: 30px;
+        width: 30px;
+        color: var(--surface-light);
+        transition: transform 0.2s ease, color 0.2s ease;
+        flex-shrink: 0;
+        stroke-width: 2.5;
+      }
+
+      .icon:hover {
+        color: var(--accent-color);
+        transform: scale(1.3);
+        cursor: pointer;
+      }
     }
   }
 }
 
 .card:hover {
   transform: scale(1.025);
-  cursor: pointer;
 }
 
 @media (max-width: 900px) {

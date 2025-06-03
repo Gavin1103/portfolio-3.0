@@ -3,9 +3,11 @@ import {ref, onMounted, onBeforeUnmount} from 'vue'
 import {Menu} from 'lucide-vue-next'
 
 const isDropdownOpen = ref(false)
+const menuButtonRef = ref<HTMLElement | null>(null)
+const dropdownRef = ref<HTMLElement | null>(null)
 
 const toggleDropdown = () => {
-  isDropdownOpen.value = !isDropdownOpen.value
+    isDropdownOpen.value = !isDropdownOpen.value
 }
 
 const handleResize = () => {
@@ -14,12 +16,32 @@ const handleResize = () => {
   }
 }
 
+const handleClickOutside = (event: MouseEvent) => {
+  const target = event.target as Node
+
+  if (
+      isDropdownOpen.value &&
+      dropdownRef.value &&
+      !dropdownRef.value.contains(target) &&
+      menuButtonRef.value &&
+      !menuButtonRef.value.contains(target)
+  ) {
+    isDropdownOpen.value = false
+  }
+}
+
+const closeDropdown = () => {
+  isDropdownOpen.value = false
+}
+
 onMounted(() => {
   window.addEventListener('resize', handleResize)
+  document.addEventListener('click', handleClickOutside)
 })
 
 onBeforeUnmount(() => {
   window.removeEventListener('resize', handleResize)
+  document.removeEventListener('click', handleClickOutside)
 })
 
 
@@ -28,7 +50,7 @@ onBeforeUnmount(() => {
   <nav>
     <div class="logo">Gavin Tjin</div>
 
-    <Menu class="hamburger-icon" @click="toggleDropdown"/>
+    <Menu ref="menuButtonRef" class="hamburger-icon" @click="toggleDropdown"/>
 
     <section class="nav-item-container">
       <RouterLink to="/" class="nav-item">Home</RouterLink>
@@ -37,9 +59,9 @@ onBeforeUnmount(() => {
   </nav>
 
   <!-- Mobiele dropdown -->
-  <section class="dropdown-menu" v-if="isDropdownOpen">
-    <div class="dropdown-item">Home</div>
-    <div class="dropdown-item">My work</div>
+  <section class="dropdown-menu" v-if="isDropdownOpen" ref="dropdownRef">
+    <RouterLink to="/" @click="closeDropdown" class="dropdown-item">Home</RouterLink>
+    <RouterLink to="/my-work" @click="closeDropdown" class="dropdown-item">My work</RouterLink>
   </section>
 </template>
 
@@ -69,6 +91,13 @@ nav {
       font-size: 20px;
       color: var(--surface-light);
       text-decoration: none;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .nav-item:hover {
+      color: var(--accent-color);
+      transform: scale(1.1);
+      cursor: pointer;
     }
 
     .nav-item-button {
@@ -80,6 +109,10 @@ nav {
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
+
+    .nav-item-button:hover {
+      color: var(--primary-color);
+    }
   }
 
 
@@ -89,6 +122,12 @@ nav {
     width: 50px;
     height: 50px;
     cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+
+  .hamburger-icon:hover {
+    color: var(--accent-color);
+    transform: scale(1.1);
   }
 }
 
@@ -119,6 +158,12 @@ nav {
       display: flex;
       justify-content: center;
       padding: 5px 0 5px 0;
+      text-decoration: none;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .dropdown-item:hover {
+      color: var(--accent-color);
     }
   }
 
