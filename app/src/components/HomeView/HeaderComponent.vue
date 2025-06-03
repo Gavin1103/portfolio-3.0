@@ -1,20 +1,78 @@
 <script setup lang="ts">
+import {ref, onMounted} from 'vue'
 
+const contentParts = [
+  {type: 'text', text: 'Hi, I’m Gavin —'},
+  {type: 'br'},
+  {type: 'text', text: 'a '},
+  {type: 'highlight', text: 'Full '},
+  {type: 'highlight', text: 'Stack '},
+  {type: 'highlight', text: 'Developer '},
+  {type: 'text', text: 'crafting clean and scalable web solutions.'}
+]
+
+const renderedParts = ref<string[]>([])
+const currentPart = ref('')
+const currentType = ref<'text' | 'highlight' | null>(null)
+
+let outerIndex = 0
+let innerIndex = 0
+
+onMounted(() => {
+  const interval = setInterval(() => {
+    const part = contentParts[outerIndex]
+    if (!part) {
+      clearInterval(interval)
+      return
+    }
+
+    if (part.type === 'br') {
+      renderedParts.value.push('<br>')
+      outerIndex++
+      innerIndex = 0
+    } else {
+      const currentText = part.text
+      currentPart.value += currentText[innerIndex]
+      currentType.value = part.type
+      innerIndex++
+
+      if (innerIndex >= currentText.length) {
+        if (part.type === 'highlight') {
+          renderedParts.value.push(`<span class="highlight">${currentPart.value}</span>`)
+        } else {
+          renderedParts.value.push(currentPart.value)
+        }
+        currentPart.value = ''
+        currentType.value = null
+        innerIndex = 0
+        outerIndex++
+      }
+    }
+  }, 60)
+})
 </script>
 
 <template>
-
   <header>
     <section class="img-container">
-      <img src="../../assets/img/360_F_699466075_DaPTBNlNQTOwwjkOiFEoOvzDV0ByXR9E.jpg" alt=""/>
+      <img
+          src="../../assets/img/360_F_699466075_DaPTBNlNQTOwwjkOiFEoOvzDV0ByXR9E.jpg"
+          alt="Gavin"
+      />
     </section>
 
     <section class="text-container">
-      <p>Hi, I’m Gavin —<br> a <span>Full Stack Developer</span> crafting clean and scalable web solutions.</p>
+      <p class="typed-text">
+        <span v-for="(part, i) in renderedParts" :key="i" v-html="part"/>
+        <span v-if="currentPart">
+            <span v-if="currentType === 'highlight'" class="highlight">{{ currentPart }}</span>
+            <span v-else>{{ currentPart }}</span>
+        </span>
+      </p>
     </section>
   </header>
-
 </template>
+
 
 <style scoped>
 
@@ -59,13 +117,14 @@ header {
       color: var(--surface-light);
       font-size: 42px;
 
-      span {
+
+      ::v-deep(.highlight) {
         color: var(--accent-color);
+        font-weight: bold;
       }
     }
   }
 }
-
 
 @media (max-width: 1000px) {
   header {
