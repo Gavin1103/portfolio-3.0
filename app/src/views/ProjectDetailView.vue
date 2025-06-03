@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import {Link, Github} from "lucide-vue-next";
-import {ref, computed} from 'vue'
-import {useRoute} from 'vue-router'
+import {ref, computed, onMounted} from 'vue'
+import {useRoute, useRouter} from 'vue-router'
 import projectData from '@/assets/projects.json'
 
 const route = useRoute()
+const router = useRouter()
 
 const project = computed(() =>
     projectData.find(p => p.identifier === route.params.id)
@@ -13,6 +14,12 @@ const project = computed(() =>
 const selectedImage = ref<string | null>(null)
 const openImage = (src: string) => selectedImage.value = src
 const closeOverlay = () => selectedImage.value = null
+
+onMounted(() => {
+  if (!project.value) {
+    router.replace('/my-work')
+  }
+})
 </script>
 
 <template>
@@ -29,7 +36,7 @@ const closeOverlay = () => selectedImage.value = null
         @click="openImage(`/img/${project.identifier}/${project['secondary-image']}`)"
     />
   </section>
-  <p class="built-info">Built with Vue.js (website) and Spring Boot (API)</p>
+  <p class="built-info">{{project?.["technical-description"]}}</p>
   <div class="link-container">
     <a v-if="project?.['url-1']" :href="project['url-1']" target="_blank">
       <Link class="link-icon"/>
