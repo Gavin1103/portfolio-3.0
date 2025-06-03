@@ -6,7 +6,7 @@
 
   <header>
     <section class="img-container">
-      <img src="../../assets/360_F_699466075_DaPTBNlNQTOwwjkOiFEoOvzDV0ByXR9E.jpg" alt=""/>
+      <img src="../../assets/img/360_F_699466075_DaPTBNlNQTOwwjkOiFEoOvzDV0ByXR9E.jpg" alt=""/>
     </section>
 
     <section class="text-container">
@@ -33,11 +33,18 @@ header {
     justify-content: center;
     align-items: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, color 0.4s ease;
 
     img {
       width: 75%;
       border-radius: 15px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+
     }
   }
 

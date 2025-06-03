@@ -5,7 +5,7 @@ import {Github, ExternalLink, Info} from "lucide-vue-next";
 
 <template>
   <div class="card">
-    <img src="../../assets/visie-op-de-uitslag.png" alt="project-image"/>
+    <img src="../../assets/img/visie-op-de-uitslag.png" alt="project-image"/>
     <p class="card-text">Visie op de uitslag</p>
     <div class="card-icons-container">
       <a href="https://visie-op-de-uitslag.up.railway.app/" target="_blank">

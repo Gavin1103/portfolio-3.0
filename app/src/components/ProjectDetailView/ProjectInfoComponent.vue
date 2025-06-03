@@ -2,7 +2,7 @@
 import {Link} from "lucide-vue-next";
 import {ref} from 'vue'
 
-import visie_API_image from '@/assets/visie-op-de-uitslag-api.png'
+import visie_API_image from '@/assets/img/visie-op-de-uitslag-api.png'
 
 const selectedImage = ref<string | null>(null)
 
@@ -20,12 +20,12 @@ const closeOverlay = () => {
   <h1><span>Project—</span>Visie op de uitslag</h1>
   <section class="img-container">
     <img
-        src="../../assets/visie-op-de-uitslag.png"
+        src="../../assets/img/visie-op-de-uitslag.png"
         alt="Visie op de uitslag"
         @click="openImage('../../assets/visie-op-de-uitslag.png')"
     />
     <img
-        src="../../assets/visie-op-de-uitslag-api.png"
+        src="../../assets/img/visie-op-de-uitslag-api.png"
         alt="Visie op de uitslag"
         @click="openImage('../../assets/visie-op-de-uitslag-api.png')"
     />

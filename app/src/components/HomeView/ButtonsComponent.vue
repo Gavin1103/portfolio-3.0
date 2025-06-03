@@ -1,21 +1,23 @@
 <script setup lang="ts">
 import {FileText, Github, Linkedin} from 'lucide-vue-next'
+import cvPdf from '@/assets/cv/Gavin_Tjin_cv.pdf'
+
 </script>
 
 <template>
   <section>
-    <button>
-      <FileText class="icon"/>
+    <a :href="cvPdf" target="_blank" rel="noopener">
+      <FileText class="icon" />
       View Resume
-    </button>
-    <button>
+    </a>
+    <a href="https://github.com/Gavin1103" target="_blank" rel="noopener">
       <Github class="icon"/>
       Github
-    </button>
-    <button>
+    </a>
+    <a href="https://www.linkedin.com/in/gavintjin/" target="_blank" rel="noopener">
       <Linkedin class="icon"/>
       LinkedIn
-    </button>
+    </a>
   </section>
 </template>
 
@@ -27,7 +29,7 @@ section {
   justify-content: space-between;
   border-top: 0.2rem solid var(--surface-light);
 
-  button {
+  a {
     min-width: 200px;
     width: 30%;
     height: 75px;
@@ -43,10 +45,18 @@ section {
     align-items: center;
     justify-content: center;
     gap: 12px;
+    text-decoration: none;
+
+    &:hover {
+      transition: transform 0.2s ease, color 0.2s ease;
+      cursor: pointer;
+      transform: scale(1.05);
+    }
 
     .icon {
       width: 24px;
       height: 24px;
+      stroke-width: 2.5;
     }
   }
 }
@@ -57,7 +67,7 @@ section {
    flex-direction: column;
    align-items: center;
 
-   button{
+   a{
      margin: 20px 0;
      width: 100%;
    }
