@@ -1,20 +1,29 @@
 <script setup lang="ts">
-import {ref, onMounted} from 'vue'
+import { ref, onMounted } from 'vue'
 
-const contentParts = [
-  {type: 'text', text: 'Hi, I’m Gavin —'},
-  {type: 'br'},
-  {type: 'text', text: 'a '},
-  {type: 'highlight', text: 'Full '},
-  {type: 'highlight', text: 'Stack '},
-  {type: 'highlight', text: 'Developer '},
-  {type: 'text', text: 'crafting clean and scalable web solutions.'}
+// Typedefinitie van elk tekstsegment
+type Segment =
+    | { type: 'text'; text: string }
+    | { type: 'highlight'; text: string }
+    | { type: 'br' }
+
+// Geanimeerde content in logische segmenten
+const contentParts: Segment[] = [
+  { type: 'text', text: 'Hi, I’m Gavin —' },
+  { type: 'br' },
+  { type: 'text', text: 'a ' },
+  { type: 'highlight', text: 'Full ' },
+  { type: 'highlight', text: 'Stack ' },
+  { type: 'highlight', text: 'Developer ' },
+  { type: 'text', text: 'crafting clean and scalable web solutions.' }
 ]
 
+// Weergegeven onderdelen
 const renderedParts = ref<string[]>([])
 const currentPart = ref('')
 const currentType = ref<'text' | 'highlight' | null>(null)
 
+// Posities in de contentParts en individuele tekst
 let outerIndex = 0
 let innerIndex = 0
 
@@ -27,28 +36,33 @@ onMounted(() => {
     }
 
     if (part.type === 'br') {
+      // Voeg een regelafbreking toe
       renderedParts.value.push('<br>')
       outerIndex++
       innerIndex = 0
-    } else {
-      const currentText = part.text
-      currentPart.value += currentText[innerIndex]
-      currentType.value = part.type
-      innerIndex++
-
-      if (innerIndex >= currentText.length) {
-        if (part.type === 'highlight') {
-          renderedParts.value.push(`<span class="highlight">${currentPart.value}</span>`)
-        } else {
-          renderedParts.value.push(currentPart.value)
-        }
-        currentPart.value = ''
-        currentType.value = null
-        innerIndex = 0
-        outerIndex++
-      }
+      return
     }
-  }, 60)
+
+    const currentText = part.text
+    currentPart.value += currentText[innerIndex]
+    currentType.value = part.type
+    innerIndex++
+
+    const isDone = innerIndex >= currentText.length
+    if (isDone) {
+      if (part.type === 'highlight') {
+        renderedParts.value.push(`<span class="highlight">${currentPart.value}</span>`)
+      } else {
+        renderedParts.value.push(currentPart.value)
+      }
+
+      // Reset voor volgende segment
+      currentPart.value = ''
+      currentType.value = null
+      innerIndex = 0
+      outerIndex++
+    }
+  }, 60) // snelheid per letter
 })
 </script>
 
