@@ -4,25 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d26371d-ef68-499f-bdae-ea5fc00b49c0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/assets/img/test/test.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/assets/img/visie-op-de-uitslag/class-diagram-2-visie-op-de-uitslag.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/assets/img/visie-op-de-uitslag/class-diagram-visie-op-de-uitslag.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/assets/img/visie-op-de-uitslag/erd-visie-op-de-uitslag.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/assets/img/visie-op-de-uitslag/wireframe-2-visie-op-de-uitslag.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/assets/img/visie-op-de-uitslag/wireframe-visie-op-de-uitslag.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/assets/img/vr-balance/vr-balance-api.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/assets/img/vr-balance/vr-balance.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/assets/projects.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/assets/img/visie-op-de-uitslag-api.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/assets/img/visie-op-de-uitslag/visie-op-de-uitslag-api.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/assets/img/visie-op-de-uitslag.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/assets/img/visie-op-de-uitslag/visie-op-de-uitslag.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/components/MyWorkView/WorkCardComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/MyWorkView/WorkCardComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/components/ProjectDetailView/ProjectInfoComponent.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/router/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/views/MyWorkView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/views/MyWorkView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/views/ProjectDetailView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/views/ProjectDetailView.vue" afterDir="false" />
-    </list>
+    <list default="true" id="7d26371d-ef68-499f-bdae-ea5fc00b49c0" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,7 +82,7 @@
       <workItem from="1748822063226" duration="58000" />
       <workItem from="1748822136203" duration="23000" />
       <workItem from="1748822164870" duration="8000" />
-      <workItem from="1748822176781" duration="50323000" />
+      <workItem from="1748822176781" duration="50786000" />
     </task>
     <servers />
   </component>

@@ -14,7 +14,7 @@ const props = defineProps<{
 
 <template>
   <div class="card">
-    <img :src="`/src/assets/img/${props.identifier}/${props.image}`" :alt="title"/>
+    <img :src="`../../../public/img/${props.identifier}/${props.image}`" :alt="title"/>
     <p class="card-text">{{ title }}</p>
 
     <div class="card-icons-container">

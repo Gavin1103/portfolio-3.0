@@ -19,14 +19,14 @@ const closeOverlay = () => selectedImage.value = null
   <h1><span>Project—</span>{{ project?.title }}</h1>
   <section class="img-container" v-if="project">
     <img
-        :src="`/src/assets/img/${project.identifier}/${project['primary-image']}`"
+        :src="`../../../public/img/${project.identifier}/${project['primary-image']}`"
         :alt="project.title"
-        @click="openImage(`/src/assets/img/${project.identifier}/${project['primary-image']}`)"
+        @click="openImage(`../../../public/img/${project.identifier}/${project['primary-image']}`)"
     />
     <img
-        :src="`/src/assets/img/${project.identifier}/${project['secondary-image']}`"
+        :src="`../../../public/img/${project.identifier}/${project['secondary-image']}`"
         :alt="project.title"
-        @click="openImage(`/src/assets/img/${project.identifier}/${project['secondary-image']}`)"
+        @click="openImage(`../../../public/img/${project.identifier}/${project['secondary-image']}`)"
     />
   </section>
   <p class="built-info">Built with Vue.js (website) and Spring Boot (API)</p>
@@ -54,9 +54,9 @@ const closeOverlay = () => selectedImage.value = null
     <img
         v-for="(img, i) in project['extra-images']"
         :key="i"
-        :src="`/src/assets/img/${project.identifier}/${img}`"
+        :src="`../../../public/img/${project.identifier}/${img}`"
         :alt="project.title"
-        @click="openImage(`/src/assets/img/${project.identifier}/${img}`)"
+        @click="openImage(`../../../public/img/${project.identifier}/${img}`)"
     />
   </section>
 
