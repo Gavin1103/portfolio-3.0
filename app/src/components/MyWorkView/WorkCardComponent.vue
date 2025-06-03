@@ -14,9 +14,8 @@ const props = defineProps<{
 
 <template>
   <div class="card">
-    <img :src="`../../../public/img/${props.identifier}/${props.image}`" :alt="title"/>
+    <img :src="`/img/${props.identifier}/${props.image}`" :alt="props.title"/>
     <p class="card-text">{{ title }}</p>
-
     <div class="card-icons-container">
       <a v-if="url1" :href="url1" target="_blank">
         <ExternalLink class="icon"/>
