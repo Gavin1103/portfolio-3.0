@@ -48,7 +48,7 @@ onBeforeUnmount(() => {
 </script>
 <template>
   <nav>
-    <div class="logo">Gavin Tjin</div>
+    <RouterLink to="/" class="logo">Gavin Tjin</RouterLink>
 
     <Menu ref="menuButtonRef" class="hamburger-icon" @click="toggleDropdown"/>
 
@@ -79,6 +79,12 @@ nav {
   .logo {
     color: var(--accent-color);
     font-size: 35px;
+    transition: transform 0.2s ease, color 0.2s ease;
+    text-decoration: none;
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
   }
 
   .nav-item-container {
