@@ -71,7 +71,7 @@ onMounted(() => {
     <section class="img-container">
       <img
           src="../../../public/img/#"
-          alt="Gavin"
+          alt="profile-image-gavin"
       />
     </section>
 
