@@ -70,7 +70,7 @@ onMounted(() => {
   <header>
     <section class="img-container">
       <img
-          src="../../../public/img/#"
+          src="#"
           alt="profile-image-gavin"
       />
     </section>
