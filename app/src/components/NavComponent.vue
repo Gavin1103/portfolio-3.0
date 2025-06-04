@@ -7,7 +7,7 @@ const menuButtonRef = ref<HTMLElement | null>(null)
 const dropdownRef = ref<HTMLElement | null>(null)
 
 const toggleDropdown = () => {
-    isDropdownOpen.value = !isDropdownOpen.value
+  isDropdownOpen.value = !isDropdownOpen.value
 }
 
 const handleResize = () => {
@@ -48,7 +48,12 @@ onBeforeUnmount(() => {
 </script>
 <template>
   <nav>
-    <RouterLink to="/" class="logo">Gavin Tjin</RouterLink>
+    <RouterLink to="/" class="logo">
+      <span v-for="(char, i) in 'Gavin Tjin'.split('')" :key="i" class="logo-letter"
+            :style="`animation-delay: ${i * 0.1}s`">
+        {{ char === ' ' ? '\u00A0' : char }}
+      </span>
+    </RouterLink>
 
     <Menu ref="menuButtonRef" class="hamburger-icon" @click="toggleDropdown"/>
 
@@ -67,6 +72,15 @@ onBeforeUnmount(() => {
 
 <style scoped>
 
+@keyframes colorPulse {
+  0%, 100% {
+    color: var(--accent-color);
+  }
+  50% {
+    color: var(--surface-light);
+  }
+}
+
 nav {
   width: 100%;
   height: 100px;
@@ -77,13 +91,27 @@ nav {
   padding: 10px 0;
 
   .logo {
-    color: var(--accent-color);
     font-size: 35px;
-    transition: transform 0.2s ease, color 0.2s ease;
     text-decoration: none;
+    display: flex;
+    gap: 1px;
+    transition: transform 0.2s ease, color 0.2s ease;
+
+    .logo-letter {
+      --letter-color: var(--accent-color);
+      color: var(--letter-color);
+      display: inline-block;
+      animation: none;
+      transition: color 0.5s ease;
+    }
+
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
       cursor: pointer;
+
+      .logo-letter {
+        animation: colorPulse 1.5s infinite ease-in-out;
+      }
     }
   }
 
