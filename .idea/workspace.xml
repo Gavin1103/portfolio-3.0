@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d26371d-ef68-499f-bdae-ea5fc00b49c0" name="Changes" comment="" />
+    <list default="true" id="7d26371d-ef68-499f-bdae-ea5fc00b49c0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/public/img/vr-balance/vr-balance-class-diagram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/public/img/vr-balance/vr-balance-erd.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/assets/projects.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/assets/projects.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,11 +62,11 @@
       <recent name="$PROJECT_DIR$/portfolio/app/src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/public" />
       <recent name="$PROJECT_DIR$/app/src/assets/img/test" />
       <recent name="$PROJECT_DIR$/app/src/assets/img/visie-op-de-uitslag" />
       <recent name="$PROJECT_DIR$/app/src/assets/img/projects" />
       <recent name="$PROJECT_DIR$/app/src/assets/img" />
-      <recent name="$PROJECT_DIR$/app/src/assets/cv" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -82,7 +87,7 @@
       <workItem from="1748822063226" duration="58000" />
       <workItem from="1748822136203" duration="23000" />
       <workItem from="1748822164870" duration="8000" />
-      <workItem from="1748822176781" duration="50786000" />
+      <workItem from="1748822176781" duration="56943000" />
     </task>
     <servers />
   </component>
