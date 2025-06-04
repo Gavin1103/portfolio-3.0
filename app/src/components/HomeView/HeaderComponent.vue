@@ -70,7 +70,7 @@ onMounted(() => {
   <header>
     <section class="img-container">
       <img
-          src="../../../public/img/360_F_699466075_DaPTBNlNQTOwwjkOiFEoOvzDV0ByXR9E.jpg"
+          src="../../../public/img/#"
           alt="Gavin"
       />
     </section>

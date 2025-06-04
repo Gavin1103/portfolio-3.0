@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7d26371d-ef68-499f-bdae-ea5fc00b49c0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/assets/projects.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/assets/projects.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/public/img/360_F_699466075_DaPTBNlNQTOwwjkOiFEoOvzDV0ByXR9E.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/components/HomeView/HeaderComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/HomeView/HeaderComponent.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +87,7 @@
       <workItem from="1748822136203" duration="23000" />
       <workItem from="1748822164870" duration="8000" />
       <workItem from="1748822176781" duration="59594000" />
-      <workItem from="1749055992797" duration="333000" />
+      <workItem from="1749055992797" duration="1027000" />
     </task>
     <servers />
   </component>
