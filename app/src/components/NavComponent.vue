@@ -49,12 +49,14 @@ onBeforeUnmount(() => {
 <template>
   <nav>
     <RouterLink to="/" class="logo">
+      <!--      Logo animation-->
       <span v-for="(char, i) in 'Gavin Tjin'.split('')" :key="i" class="logo-letter"
             :style="`animation-delay: ${i * 0.1}s`">
         {{ char === ' ' ? '\u00A0' : char }}
       </span>
     </RouterLink>
 
+    <!--    Hamburger menu button-->
     <Menu ref="menuButtonRef" class="hamburger-icon" @click="toggleDropdown"/>
 
     <section class="nav-item-container">
