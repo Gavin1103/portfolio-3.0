@@ -38,7 +38,7 @@
     "identifier": "test",
     "title": "Tests",
     "primary-image": "test.png",
-    "git": "/test",
+    "git": "https://github.com/Gavin1103/tests-for-portfolio",
     "description": "",
     "secondary-image": "",
     "intern-link": "",
