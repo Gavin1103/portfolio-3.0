@@ -70,7 +70,7 @@ onMounted(() => {
   <header>
     <section class="img-container">
       <img
-          src="#"
+          src="../../../public/img/profiel-foto-06-2025.png"
           alt="profile-image-gavin"
       />
     </section>
@@ -97,6 +97,7 @@ header {
   display: flex;
 
   .img-container {
+    padding: 40px 0;
     min-width: 300px;
     background-color: var(--surface-light);
     width: 40%;
@@ -108,7 +109,7 @@ header {
     transition: transform 0.4s ease, color 0.4s ease;
 
     img {
-      width: 75%;
+      width: 50%;
       border-radius: 15px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
