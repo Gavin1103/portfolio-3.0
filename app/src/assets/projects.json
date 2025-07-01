@@ -22,16 +22,20 @@
     "identifier": "vr-balance",
     "title": "VR Balance",
     "primary-image": "vr-balance.png",
-    "git": "/test",
+    "git": "https://github.com/Gavin1103/vr-balance",
     "description": "For this school/minor project, we were tasked with developing a VR application in Unity to help users improve their balance and reduce lower back pain. Additionally, the client requested a CMS platform to manage users and view patient statistics.\n\nSince I already had experience with web development and data handling, I took on the responsibility for both the frontend (website) and backend (API) of the system. Visitors can log in using the credentials email: admin@vrbalance.com and password: admin to explore the CMS.",
-    "technical-description": "Built with vue.js (website) and Spring Boot (API)",
+    "technical-description": "Built with vue.js (website), Unity (VR-app) and Spring Boot (API)",
     "secondary-image": "vr-balance-api.png",
     "intern-link": "vr-balance",
     "url-1": "https://vrbalance.up.railway.app/",
     "url-2": "https://vrbalance-api.up.railway.app/swagger-ui/index.html",
+    "url-meta-store": "https://www.meta.com/en-gb/experiences/motion-virtual-physiotherapy/24055028290798310/",
     "extra-images": [
       "vr-balance-erd.png",
-      "vr-balance-class-diagram.png"
+      "vr-balance-class-diagram.png",
+      "preview.png",
+      "preview_2.png",
+      "preview_3.png"
     ]
   },
   {

@@ -19,6 +19,7 @@ const projectList = ref(projects)
         :url1="project['url-1']"
         :git="project.git"
         :info="project['intern-link']"
+        :url-meta-store="project['url-meta-store']"
     />
   </section>
 </template>

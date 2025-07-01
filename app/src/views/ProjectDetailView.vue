@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {Link, Github} from "lucide-vue-next";
+import {Link, Github, RectangleGoggles} from "lucide-vue-next";
 import {ref, computed, onMounted} from 'vue'
 import {useRoute, useRouter} from 'vue-router'
 import projectData from '@/assets/projects.json'
@@ -49,6 +49,10 @@ onMounted(() => {
     <a v-if="project?.git" :href="project.git" target="_blank">
       <Github class="link-icon"/>
       GitHub
+    </a>
+    <a v-if="project?.['url-meta-store']" :href="project['url-meta-store']" target="_blank">
+      <rectangle-goggles class="link-icon"/>
+      Meta
     </a>
   </div>
   <p class="project-description">

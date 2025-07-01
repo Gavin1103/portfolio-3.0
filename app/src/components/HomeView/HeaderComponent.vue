@@ -87,7 +87,6 @@ onMounted(() => {
   </header>
 </template>
 
-
 <style scoped>
 
 header {

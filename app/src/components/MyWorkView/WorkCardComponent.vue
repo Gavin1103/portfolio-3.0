@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {defineProps} from 'vue'
-import {Github, ExternalLink, Info} from 'lucide-vue-next'
+import {Github, ExternalLink, Info, RectangleGoggles} from 'lucide-vue-next'
 
 const props = defineProps<{
   identifier: string
@@ -9,6 +9,7 @@ const props = defineProps<{
   url1?: string
   git?: string
   info?: string
+  urlMetaStore?: string
 }>()
 </script>
 
@@ -25,6 +26,9 @@ const props = defineProps<{
       </RouterLink>
       <a v-if="git && git !== '#'" :href="git" target="_blank">
         <Github class="icon"/>
+      </a>
+      <a v-if="urlMetaStore && urlMetaStore !== '#'" :href="urlMetaStore" target="_blank">
+        <RectangleGoggles class="icon"/>
       </a>
     </div>
   </div>
