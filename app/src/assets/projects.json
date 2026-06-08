@@ -39,6 +39,47 @@
     ]
   },
   {
+    "identifier": "social-care-companion-node",
+    "intern-link": "social-care-companion-node",
+    "title": "Social Care Companion Node",
+    "git": "https://github.com/Gavin1103/social-care-companion-node",
+    "description": "  For this school/minor project (Smart Cities), we developed a smart care companion system for elderly people. The platform consists of four interconnected components: a web-based\n  CMS for administrators and caregivers, a REST API backend, a Wear OS app for smartwatches, and firmware for a Raspberry Pi IoT device deployed at the patient's home.\n\n  The web application serves two distinct audiences. The CMS (for admins and caregivers) allows managing patients and caregivers, viewing health statistics, and handling care\n  relations. The companion view is a patient-facing dashboard designed to run on a screen at the patient's home — it greets the patient by name, shows the current time and date,\n  indoor temperature and humidity measured by the Raspberry Pi, live outdoor weather, the daily agenda, and a button to directly call their caregiver. Patients can also make voice\n  recordings through the interface.\n\n  Health data — heart rate and daily step count — is collected from a paired Wear OS smartwatch and surfaced in both the CMS and the patient dashboard.\n\n  As the lead on both frontend and backend, I built the Angular web application and the NestJS API from the ground up — including JWT-based authentication with role-based access\n  control (Admin, Caregiver, Patient), a layered repository/service/controller architecture, and a full Swagger API reference.",
+    "technical-description": "  Built with Angular (web), NestJS + Prisma + PostgreSQL (API), Wear OS (Android smartwatch), and MicroPython on an ESP32-C3 (Raspberry Pi IoT device). Deployed with Docker Compose.\n",
+    "url-1": "https://social-care-web.gavintjin.nl/",
+    "url-2": "https://social-care-api.gavintjin.nl/docs",
+    "primary-image": "scc-web.png",
+    "secondary-image": "scc-web-cms.png",
+    "extra-images": [
+      "scc-api.png",
+      "scc-web-patients.png",
+      "scc-patient-detail.png",
+      "scc-patient-hardware-info.png",
+      "scc-patient-speech-recording.png"
+    ]
+  },
+  {
+    "identifier": "smart-heaven",
+    "intern-link": "smart-heaven",
+    "title": "Smart Heaven",
+    "git": "https://github.com/Gavin1103/smart-heaven",
+    "description": "  For this school/minor project, we were tasked with building a smart city simulation where physical embedded devices — such as traffic lights, railway barriers, and parking sensors — communicate with a\n  central management platform. The goal was to demonstrate how IoT devices in a smart city can be monitored and controlled in real time.\n  \n  Since I already had experience with web development and API design, I took on the responsibility for both the frontend dashboard (web) and the backend API. The API handles device registration, telemetry\n  ingestion from embedded hardware, live state tracking, logging, and user management. The dashboard gives operators an overview of all connected devices, hardware types, statuses, and logs.",
+    "technical-description": "Built with Vue (website) and NestJS (API)",
+    "url-1": "https://smart-heaven-web.gavintjin.nl/",
+    "url-2": "https://smart-heaven-api.gavintjin.nl/docs",
+    "primary-image": "sm-dashboard.png",
+    "secondary-image": "sm-api.png",
+    "extra-images": [
+      "fleet-devices.png",
+      "fleet-hardware-types.png",
+      "sm-all-logs.png",
+      "sm-logs-error.png",
+      "sm-create-device.png",
+      "sm-create-user.png",
+      "sm-users-overview.png",
+      "erd.png"
+    ]
+  },
+  {
     "identifier": "test",
     "title": "Tests",
     "primary-image": "test.png",
