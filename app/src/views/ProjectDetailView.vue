@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {Link, Github, RectangleGoggles} from "lucide-vue-next";
-import {ref, computed, onMounted} from 'vue'
+import {ref, computed, onMounted, onUnmounted} from 'vue'
 import {useRoute, useRouter} from 'vue-router'
 import projectData from '@/assets/projects.json'
 
@@ -15,10 +15,19 @@ const selectedImage = ref<string | null>(null)
 const openImage = (src: string) => selectedImage.value = src
 const closeOverlay = () => selectedImage.value = null
 
+const handleKeydown = (e: KeyboardEvent) => {
+  if (e.key === 'Escape') closeOverlay()
+}
+
 onMounted(() => {
   if (!project.value) {
     router.replace('/my-work')
   }
+  window.addEventListener('keydown', handleKeydown)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('keydown', handleKeydown)
 })
 
 const formattedDescription = computed(() => {
