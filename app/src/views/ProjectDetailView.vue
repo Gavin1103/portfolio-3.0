@@ -20,6 +20,14 @@ onMounted(() => {
     router.replace('/my-work')
   }
 })
+
+const formattedDescription = computed(() => {
+  if (!project.value?.description) return ''
+  return project.value.description
+      .split('\n\n')
+      .map(p => `<p>${p.trim()}</p>`)
+      .join('')
+})
 </script>
 
 <template>
@@ -36,7 +44,7 @@ onMounted(() => {
         @click="openImage(`/img/${project.identifier}/${project['secondary-image']}`)"
     />
   </section>
-  <p class="built-info">{{project?.["technical-description"]}}</p>
+  <p class="built-info">{{ project?.["technical-description"] }}</p>
   <div class="link-container">
     <a v-if="project?.['url-1']" :href="project['url-1']" target="_blank">
       <Link class="link-icon"/>
@@ -55,9 +63,8 @@ onMounted(() => {
       Meta
     </a>
   </div>
-  <p class="project-description">
-    {{ project?.description }}
-  </p>
+
+  <div class="project-description" v-html="formattedDescription"></div>
 
   <h2 v-if="project?.['extra-images']?.length">Extra</h2>
   <section class="img-container" v-if="project?.['extra-images']?.length">
@@ -75,6 +82,7 @@ onMounted(() => {
     <img :src="selectedImage" alt="Zoomed in" @click.stop/>
   </div>
 </template>
+
 <style scoped>
 h1 {
   color: var(--surface-light);
@@ -91,10 +99,6 @@ h1 {
   justify-content: space-between;
   gap: 30px;
 
-  &:last-child {
-    padding: 0 0 75px 0;
-  }
-
   img {
     min-width: 300px;
     width: 47.5%;
@@ -107,6 +111,10 @@ h1 {
       transform: scale(1.05);
     }
   }
+}
+
+.img-container:last-of-type {
+  padding-bottom: 75px;
 }
 
 p {
@@ -138,6 +146,10 @@ p {
       cursor: pointer;
     }
   }
+}
+
+.project-description {
+  color: white;
 }
 
 h2 {

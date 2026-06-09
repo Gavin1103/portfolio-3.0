@@ -1,41 +1,28 @@
 [
   {
-    "identifier": "visie-op-de-uitslag",
-    "title": "Visie op de uitslag",
-    "primary-image": "visie-op-de-uitslag.png",
-    "git": "https://github.com/Gavin1103/Visie-op-de-uitslag",
-    "description": "For this school project, we developed a platform to visualize statistics from the 2023 elections. In addition to the statistics, we also built a forum where users can engage in discussions — inspired by platforms like Reddit and Stack Overflow. The project was developed by a team of four students using Spring Boot (API) and Vue.js (frontend).\n\nWe also created a CMS system for managing the forum content. Visitors can log in using the credentials email: admin@admin.com and password: admin to explore the CMS. Please note that not all features are fully functional yet, as this was a prototype built within a limited time frame",
-    "technical-description": "Built with vue.js (website) and Spring Boot (API)",
-    "secondary-image": "visie-op-de-uitslag-api.png",
-    "intern-link": "visie-op-de-uitslag",
-    "url-1": "https://visie-op-de-uitslag.up.railway.app/",
-    "url-2": "https://visie-op-de-uitslag-api.up.railway.app/api/swagger-ui/index.html#/",
+    "identifier": "phone-cycle",
+    "intern-link": "phone-cycle",
+    "title": "Phone Cycle",
+    "git": "https://github.com/Gavin1103/phone-cycle",
+    "description": "Status: In development — website and CMS are largely completed\n\n\n\nPhoneCycle is a fully custom-built web application that allows consumers to sell their used smartphones to PhoneCycle. The platform consists of two parts: a public-facing website for customers and an internal CMS for staff.\n\n\n\nPublic website: Customers go through a step-by-step questionnaire (brand, model, storage capacity, screen condition, back cover, housing, and battery percentage), based on which a buy-back price is automatically calculated. After accepting the offer, they choose between dropping off the device or receiving a shipping label, fill in their personal details, and their submission is processed. PostNL integration handles the creation of shipping labels directly within the system (not finished yet).\n\n\n\nCMS (admin panel): Staff log in via JWT authentication and have access to a submission overview with status management, tracking each device from registration through to payment or return. Each submission has its own detail page with a full status history and the ability to add internal notes. The panel also includes device management for creating and toggling brands, models, and storage options, as well as a pricing module where staff can configure prices per device and condition.",
+    "technical-description": "Built with Vue 3, TypeScript, Pinia and Vite on the frontend, and NestJS with Prisma ORM and PostgreSQL on the backend. Additional integrations include JWT authentication, SendGrid for email, the PostNL API for shipping labels, and Docker for deployment.",
+    "url-1": "https://phone-cycle-web.up.railway.app/",
+    "url-2": "https://phone-cycle-api.up.railway.app/docs",
+    "primary-image": "pc-home-page.png",
+    "secondary-image": "pc-api.png",
     "extra-images": [
-      "class-diagram-visie-op-de-uitslag.png",
-      "class-diagram-2-visie-op-de-uitslag.png",
-      "erd-visie-op-de-uitslag.png",
-      "wireframe-visie-op-de-uitslag.png",
-      "wireframe-2-visie-op-de-uitslag.png"
-    ]
-  },
-  {
-    "identifier": "vr-balance",
-    "title": "VR Balance",
-    "primary-image": "vr-balance.png",
-    "git": "https://github.com/Gavin1103/vr-balance",
-    "description": "For this school/minor project, we were tasked with developing a VR application in Unity to help users improve their balance and reduce lower back pain. Additionally, the client requested a CMS platform to manage users and view patient statistics.\n\nSince I already had experience with web development and data handling, I took on the responsibility for both the frontend (website) and backend (API) of the system. Visitors can log in using the credentials email: admin@vrbalance.com and password: admin to explore the CMS.",
-    "technical-description": "Built with vue.js (website), Unity (VR-app) and Spring Boot (API)",
-    "secondary-image": "vr-balance-api.png",
-    "intern-link": "vr-balance",
-    "url-1": "https://vrbalance.up.railway.app/",
-    "url-2": "https://vrbalance-api.up.railway.app/swagger-ui/index.html",
-    "url-meta-store": "https://www.meta.com/en-gb/experiences/motion-virtual-physiotherapy/24055028290798310/",
-    "extra-images": [
-      "vr-balance-erd.png",
-      "vr-balance-class-diagram.png",
-      "preview.png",
-      "preview_2.png",
-      "preview_3.png"
+      "pc-form-step-1.png",
+      "pc-form-step-2.png",
+      "pc-form-step-3.png",
+      "pc-cms-dashboard.png",
+      "pc-cms-submissions-overview.png",
+      "pc-cms-submission-detail.png",
+      "pc-cms-submission-info.png",
+      "pc-cms-submission-results.png",
+      "pc-cms-fleet-devices.png",
+      "pc-cms-device-detail.png",
+      "pc-ERD-1.png",
+      "pc-ERD-2.png"
     ]
   },
   {
@@ -77,6 +64,45 @@
       "sm-create-user.png",
       "sm-users-overview.png",
       "erd.png"
+    ]
+  },
+  {
+    "identifier": "visie-op-de-uitslag",
+    "title": "Visie op de uitslag",
+    "primary-image": "visie-op-de-uitslag.png",
+    "git": "https://github.com/Gavin1103/Visie-op-de-uitslag",
+    "description": "For this school project, we developed a platform to visualize statistics from the 2023 elections. In addition to the statistics, we also built a forum where users can engage in discussions — inspired by platforms like Reddit and Stack Overflow. The project was developed by a team of four students using Spring Boot (API) and Vue.js (frontend).\n\nWe also created a CMS system for managing the forum content. Visitors can log in using the credentials email: admin@admin.com and password: admin to explore the CMS. Please note that not all features are fully functional yet, as this was a prototype built within a limited time frame",
+    "technical-description": "Built with vue.js (website) and Spring Boot (API)",
+    "secondary-image": "visie-op-de-uitslag-api.png",
+    "intern-link": "visie-op-de-uitslag",
+    "url-1": "https://visie-op-de-uitslag.up.railway.app/",
+    "url-2": "https://visie-op-de-uitslag-api.up.railway.app/api/swagger-ui/index.html#/",
+    "extra-images": [
+      "class-diagram-visie-op-de-uitslag.png",
+      "class-diagram-2-visie-op-de-uitslag.png",
+      "erd-visie-op-de-uitslag.png",
+      "wireframe-visie-op-de-uitslag.png",
+      "wireframe-2-visie-op-de-uitslag.png"
+    ]
+  },
+  {
+    "identifier": "vr-balance",
+    "title": "VR Balance",
+    "primary-image": "vr-balance.png",
+    "git": "https://github.com/Gavin1103/vr-balance",
+    "description": "For this school/minor project, we were tasked with developing a VR application in Unity to help users improve their balance and reduce lower back pain. Additionally, the client requested a CMS platform to manage users and view patient statistics.\n\nSince I already had experience with web development and data handling, I took on the responsibility for both the frontend (website) and backend (API) of the system. Visitors can log in using the credentials email: admin@vrbalance.com and password: admin to explore the CMS.",
+    "technical-description": "Built with vue.js (website), Unity (VR-app) and Spring Boot (API)",
+    "secondary-image": "vr-balance-api.png",
+    "intern-link": "vr-balance",
+    "url-1": "https://vrbalance.up.railway.app/",
+    "url-2": "https://vrbalance-api.up.railway.app/swagger-ui/index.html",
+    "url-meta-store": "https://www.meta.com/en-gb/experiences/motion-virtual-physiotherapy/24055028290798310/",
+    "extra-images": [
+      "vr-balance-erd.png",
+      "vr-balance-class-diagram.png",
+      "preview.png",
+      "preview_2.png",
+      "preview_3.png"
     ]
   },
   {
