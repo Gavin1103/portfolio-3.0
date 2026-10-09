@@ -1,5 +1,6 @@
 services:
   app:
+    image: ghcr.io/gavin1103/portfolio-3.0:latest
     build:
       context: ./app
       dockerfile: Dockerfile
